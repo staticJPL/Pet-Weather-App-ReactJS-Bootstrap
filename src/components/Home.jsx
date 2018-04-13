@@ -1,11 +1,8 @@
 import React,{Component} from 'react'
 import {Link} from 'react-router-dom';
-import {Jumbotron,Grid,Button} from 'react-bootstrap';
+import {Jumbotron,Grid} from 'react-bootstrap';
 import './Home.css';
 import Table from './Table';
-
-
-
 
 export default class Home extends Component{
     render(){

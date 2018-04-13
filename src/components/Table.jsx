@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { button } from 'react-bootstrap';
+import '../../node_modules/react-bootstrap-table/dist/react-bootstrap-table.min.css'
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import './Table.css';
-
 class Table extends Component {
 
     constructor(props){
@@ -27,7 +28,7 @@ class Table extends Component {
     CreateTable(){
 
         function buttonFormatter(cell, row){
-            return '<Button type="submit">View</Button>';
+            return (<button type="button" class="btn btn-primary" >View</button>);
         }
 
         return(
@@ -36,8 +37,7 @@ class Table extends Component {
                 <TableHeaderColumn dataField="name"> Pet Name</TableHeaderColumn>
                 <TableHeaderColumn dataField="type">Type</TableHeaderColumn>
                 <TableHeaderColumn dataField="breed">Breed</TableHeaderColumn>
-                <TableHeaderColumn dataField="button" dataFormat={buttonFormatter}></TableHeaderColumn>
-        </BootstrapTable>);
+            </BootstrapTable>);
     }
 
     render() {
